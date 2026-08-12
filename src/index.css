@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-lime text-charcoal;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .container-edge {
+    @apply mx-auto w-full max-w-[1400px] px-6 md:px-10 lg:px-16;
+  }
+
+  .container-narrow {
+    @apply mx-auto w-full max-w-[1200px] px-6 md:px-10 lg:px-16;
+  }
+
+  .label {
+    @apply text-[11px] font-semibold uppercase tracking-[0.25em] text-charcoal/60;
+  }
+
+  .label-light {
+    @apply text-[11px] font-semibold uppercase tracking-[0.25em] text-ivory/60;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-lime px-7 py-4 text-[13px] font-semibold uppercase tracking-[0.15em] text-charcoal transition-all duration-300 hover:bg-lime-dark hover:gap-3 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border border-charcoal/30 bg-transparent px-7 py-4 text-[13px] font-semibold uppercase tracking-[0.15em] text-charcoal transition-all duration-300 hover:border-charcoal hover:bg-charcoal hover:text-ivory hover:gap-3 active:scale-[0.98];
+  }
+
+  .btn-ghost-light {
+    @apply inline-flex items-center gap-2 border border-ivory/30 bg-transparent px-7 py-4 text-[13px] font-semibold uppercase tracking-[0.15em] text-ivory transition-all duration-300 hover:border-ivory hover:bg-ivory hover:text-charcoal hover:gap-3 active:scale-[0.98];
+  }
+
+  .input-field {
+    @apply w-full border-b border-charcoal/20 bg-transparent py-3 text-[15px] text-charcoal placeholder-charcoal/40 transition-colors duration-300 focus:border-charcoal focus:outline-none;
+  }
+
+  .input-field-light {
+    @apply w-full border-b border-ivory/20 bg-transparent py-3 text-[15px] text-ivory placeholder-ivory/40 transition-colors duration-300 focus:border-ivory focus:outline-none;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
