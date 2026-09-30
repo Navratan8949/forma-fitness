@@ -54,9 +54,14 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-ivory/15 pt-8 md:flex-row">
-          <p className="text-[12px] uppercase tracking-[0.15em] text-ivory/40">
-            © 2026 FORMA. ALL RIGHTS RESERVED.
-          </p>
+          <div className="flex flex-col items-center md:items-start">
+            <p className="text-[12px] uppercase tracking-[0.15em] text-ivory/40">
+              © 2026 FORMA. ALL RIGHTS RESERVED.
+            </p>
+            <p className="text-[12px] uppercase tracking-[0.15em] text-ivory/40 mt-1">
+              Designed by <a href="https://codepecharcha.com" target="_blank" rel="noopener noreferrer" className="hover:text-ivory transition-colors duration-300">Code pe Charcha</a>
+            </p>
+          </div>
           <div className="flex gap-6">
             <a href="#" className="text-[12px] uppercase tracking-[0.15em] text-ivory/40 transition-colors duration-300 hover:text-ivory">PRIVACY</a>
             <a href="#" className="text-[12px] uppercase tracking-[0.15em] text-ivory/40 transition-colors duration-300 hover:text-ivory">TERMS</a>
